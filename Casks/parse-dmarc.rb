@@ -3,7 +3,7 @@ cask "parse-dmarc" do
   name "parse-dmarc"
   desc "Single-binary, zero-dependency DMARC parser with a modern web dashboard."
   homepage "https://github.com/meysam81/parse-dmarc"
-  version "1.3.1"
+  version "1.3.9"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "parse-dmarc" do
   on_macos do
     on_intel do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_darwin_amd64.tar.gz"
-      sha256 "7246264b6a10e37f00775e098a36574534e2ff08b487f55e6e5d1ed2f0e7fa24"
+      sha256 "9734c1a36a1e48219c803bcf1a45e72c686e9bdb763603182dcf08334a3c6c9c"
     end
     on_arm do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_darwin_arm64.tar.gz"
-      sha256 "02c658785750241e0b2ca3206d458177fdf5459f446dfc7ba0b19b925b26aaa8"
+      sha256 "70fdf7ed19a936970cdf7852a5d4222264f6c83b44fba0e9c6f97d1883b36f1f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_linux_amd64.tar.gz"
-      sha256 "8353e60130ec1a3d44006721e5be5e5b9bb6c7d0ca10218c94c70129c5742be9"
+      sha256 "fd1bee984ee596b2f6fdbf46a43b273e07bff89fe87132f67e0ca18bc96d124c"
     end
     on_arm do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_linux_arm64.tar.gz"
-      sha256 "c8a2a0edb61dccbc80280f60635c66dc435d0e235925a2147789a591a69c631a"
+      sha256 "edf7873eee050854c57f72277af6d01bb3adb5017265edf400ff52364d896ab0"
     end
   end
 
@@ -37,6 +37,13 @@ cask "parse-dmarc" do
     if OS.mac?
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/parse-dmarc"]
     end
+    puts "📝 Tip: You can enable shell completion by running:"
+    puts "   parse-dmarc completion bash  # for bash"
+    puts "   parse-dmarc completion zsh   # for zsh"
+    puts "   parse-dmarc completion fish  # for fish"
+    puts ""
+    puts "📚 For more information and usage instructions, visit:"
+    puts "   https://github.com/meysam81/parse-dmarc"
   end
 
   # No zap stanza required
