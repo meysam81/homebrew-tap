@@ -3,7 +3,7 @@ cask "parse-dmarc" do
   name "parse-dmarc"
   desc "Single-binary, zero-dependency DMARC parser with a modern web dashboard."
   homepage "https://github.com/meysam81/parse-dmarc"
-  version "1.3.9"
+  version "1.3.10"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "parse-dmarc" do
   on_macos do
     on_intel do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_darwin_amd64.tar.gz"
-      sha256 "9734c1a36a1e48219c803bcf1a45e72c686e9bdb763603182dcf08334a3c6c9c"
+      sha256 "4d4e2fd695c6f9c4e35e734d89fbb8e53fed0a583a3220f317f656fbdeb3bff3"
     end
     on_arm do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_darwin_arm64.tar.gz"
-      sha256 "70fdf7ed19a936970cdf7852a5d4222264f6c83b44fba0e9c6f97d1883b36f1f"
+      sha256 "f9b1169d5838a3387b15ac7933192a218111ee880a169121eadd0dc9075fcdcb"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_linux_amd64.tar.gz"
-      sha256 "fd1bee984ee596b2f6fdbf46a43b273e07bff89fe87132f67e0ca18bc96d124c"
+      sha256 "511f447e313b2845e347ce09923d80e349c7cb345f9e5d0c2adbd7a0d497bda9"
     end
     on_arm do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_linux_arm64.tar.gz"
-      sha256 "edf7873eee050854c57f72277af6d01bb3adb5017265edf400ff52364d896ab0"
+      sha256 "1cc63e45fa68fd68751ade9eeca2db819c924dcc041d090fbec431409827bd72"
     end
   end
 
@@ -37,6 +37,8 @@ cask "parse-dmarc" do
     if OS.mac?
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/parse-dmarc"]
     end
+    puts "✨ parse-dmarc installed successfully!"
+    puts ""
     puts "📝 Tip: You can enable shell completion by running:"
     puts "   parse-dmarc completion bash  # for bash"
     puts "   parse-dmarc completion zsh   # for zsh"
