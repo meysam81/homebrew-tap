@@ -3,7 +3,7 @@ cask "parse-dmarc" do
   name "parse-dmarc"
   desc "Single-binary, zero-dependency DMARC parser with a modern web dashboard."
   homepage "https://github.com/meysam81/parse-dmarc"
-  version "1.4.3"
+  version "1.4.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "parse-dmarc" do
   on_macos do
     on_intel do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_darwin_amd64.tar.gz"
-      sha256 "5b775db4d292a54dc2f73755263ae83ddc82b9a9cfe5903b8f7b7581b03c80be"
+      sha256 "0248f7c9b2ea1c2232a283a0ed5d1d16dc1ee2e24092d58cb1ae2a0474cd9b20"
     end
     on_arm do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_darwin_arm64.tar.gz"
-      sha256 "1c58590939645dd8efe7ad3d979ea2d95856562f7dae2a8792b181ed8f334f21"
+      sha256 "2ec83b83a760f0ef810bf994a4763255cf2e647b6b68ea506bd98537732f6f69"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_linux_amd64.tar.gz"
-      sha256 "f816c629d923979e870f0eec1f47bb4a77e1c3d956679d8b5be7548830bf1ad6"
+      sha256 "f6a0748cd4878dfefd239320fdee10e50e1e5e1a0979b88ccddd30680eb2dc07"
     end
     on_arm do
       url "https://github.com/meysam81/parse-dmarc/releases/download/v#{version}/parse-dmarc_linux_arm64.tar.gz"
-      sha256 "35572f06b41d78bca3f63f1a68c9ebb167fe52945e46ff197af8ea31791fabe6"
+      sha256 "5b715132290df6cc396b8c288e29d6ecb63aa62897526bb888236fbe14f1b9f0"
     end
   end
 
